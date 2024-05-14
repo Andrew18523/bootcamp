@@ -59,10 +59,19 @@ public class demooperator {
     boolean r12 = 10/2 > 5*3; //false
     
     
-    
-    int i10 = 10;
-    double d10=10.0;
-    boolean r100 = i10==d10;
-    System.out.println(r100);
+    int n=3;
+    int result =n++ *3;// original n multiply 3, then assign 9 to result. then n= n+1;
+    System.out.println(result); //9
+    System.out.println(n); //4
+
+    int m =4;
+    int result2 =++m *5;// original n+1 then multiply 5, then assign 25 to result
+    System.out.println(result2); //25 
+    System.out.println(m); //5
+
+    int k=4;
+    int result3 = k++ *7 * ++k; //4*7*6 4*7 then k to 5, the "++k"  k to 6, then 28*6
+    System.out.println(result3);
+
   }
 }

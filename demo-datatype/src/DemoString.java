@@ -6,71 +6,125 @@ public class DemoString {
     String y =" Wrold";
     System.out.println(x);
     System.out.println(x+y);
-
-    //Primitive "int"
-    // reminder
-    int reminder = 10 % 3; //1
-    int divide = 10 / 3;  //3
-    System.out.println(reminder);
-    System.out.println(divide);
     
-    //10 May 2024
-    //Primitive "double"
-    double d1 = 10.3;
-    double d2 = 10.34567;
-    double d3 = -110.999;
-    double result2= d1+d2 -d3;
-    System.out.println(result2); 
-    // double 去做加減乘除會有問題
-    //e.g.
-    double result3= 0.1+0.2;
-    System.out.println(result3);  // rosult3 =0.30000000000000004
-    double result4 = 2+ 4*0.25 *3 /2 -10;
-    System.out.println(result4); // 2 + ((4*0.25*3)/2)-10 = -6.5
-    int f1 =7;
-    double f2 = 8.8;
-    //int f3 = f1+f2; will result error as "int (7) + double (8.8)" will convert to "double(7.0) + double(8.8)"
-    //which result must be double(15.8). However f3 (integer) is a int which result a error.
-    int g = 10/3; // =3 which there in not a error because int (10) / int (3) which the result can be int (3) as no conversation of int to double.
+    double price=9.99;
+    String item = "Book";
+    String description = "The "+item + "cost $" +price;
+    System.out.println(description);
     
-    //Primitive "char" single quote to declear a char value. 
-    char c1 = '!';
-    char c2 = ' ';
-    //char c3 = ''; is a error as char must contain a char value
-    //char c4 = 'aa'; error
+    char a= 'A';
+    String message = "The answer is:"+a;
+    System.out.println(message);
+    a++;
+    System.out.println(a);
+    char b=65;
+    System.out.println(b);
 
-    //Primitive: boolean true/false
-    //boolean b1="true"; no need double quote to qutoe true or false
-    boolean b2 = true;
-    boolean b3 = false;
+    // String Method (Tool)
+    String t ="Hello";
+    System.out.println("The lenght of " + t+" is "+t.length()); // -> t.lengt() = 5
+    
+    //check if t >=4, if yes, print hello, else goodbye
+    if (t.length()>=4){
+      System.out.println("hello");
+    } else {
+      System.out.println("goodbye");
+    }
+    // Method 2: equals()
+    String s1 = "Hello";
+    String s2 = "Hello" ;
+    if (s1.equals(s2)) { //要記呢個 .euqals().
+      System.out.println("They are having same String value");
+    } else {
+      System.out.println("They are not with same value");
+    }
+    if (!s1.equals(s2)) { //"!" = "NOT"
+      System.out.println("They are not with same value");
+    } else {
+      System.out.println("They are having same String value");
+    }
 
-    // Primitives for integer
-    // int, long, byte, short
-    byte y1 = 1;
-    //byte can store the integer from -128 to 127
-    byte y2 = -128;
-    byte y3 = 127;
-    // byte y4=128; //complle error (java can identify syntax error)
-    // short s1 =32; // can store from -32768 to 32767
-    // int from -2,147,483,647 to 2,147,483,647
-    long L1 = -9223372036854775808L; // to 9,223,372,036,854,775,807
-    // L must in the last char to indicate it is a long integer
 
-    // Primitives for number with decimal
-    double d10 = 10.2;
-    float f10 = 10.2f;
-    // float is a datatype which is lower than double. So you cannot assign a double(10.2) to a float (f10)
-    // use f is the back to specify the value is a float value
 
-    float resultf11 = 10.5f +10.5;
-    double d11 = 99.99d; // same as double d11 = 99.99;
 
-    double d12; // variable declaration
-    d12 = 10.0; // value assigment
-    double d13 = 11.0; //variable declaration and value assigment
-    d13 = 19.0; // reassigement
-    // double 13 = 19.0; you cannot redeclaer the declared variable again
+    if (s1 == s2){
+      System.out.println("They are having same String value");
+    } else {
+      System.out.println("They are not with same value");
+    }
 
-    //Local Variable -> variable that in the main. you can only declear the variable once
+    // check if s1 length >6 or s1 equal s2, print ..
+    if (s1.length()>=6 || s1.equals(s2)) { // (a||b) run a first then b
+      System.out.println(".."); // result A
+    } else {
+      System.out.println("XX"); // result B
+    }
+    //method
+    if (s1.length()>=6) {
+      System.out.println(".."); // result C
+    } else if (s1.equals(s2)) {
+      System.out.println(".."); // result D
+    } else {
+      System.out.println("XX"); // result E
+    }
+    // 雖然RESULT 一椒，但是METHOD 1 得2個RESULT 但係METHOD 2 有3個RESULT
+    // check if s1 length >6 or s1 equal s2, print ..
+    if (s1.length()>=6 && s1.equals(s2)) { // (a||b) run a first then b
+      System.out.println(".."); // result A
+    } else {
+      System.out.println("XX"); // result B
+    }
+    //method
+    if (s1.length()>=6) {
+      if (s1.equals(s2)){
+        System.out.println("..");
+      } else {
+        System.out.println("XX");
+      }
+     }  else {
+      System.out.println("XX"); // result E
+    }
+
+    //Method 3: chatAT(int index) for example ,charAt(0)
+    String s3 = "world";
+    // 0 means the first character
+    System.out.println("the 1sy character of s3="+ s3.charAt(0));
+    System.out.println("the 1sy character of s3="+ s3.charAt(4));
+    //System.out.println("the 1sy character of s3="+ s3.charAt(5)); ->StringIndexOutOfBoundsException
+    System.out.println("the 1sy character of s3="+ s3.charAt(s3.length()-1)); //always shows the last character
+
+    // check the last character is d
+    String x2 = "hello world";
+    if (x2.charAt(x2.length()-1) == 'd' && x2.length()>=5){ //only String can use .equals() charAt ->world -> d which is char so can not use .equals()
+      System.out.println("Correct");
+    }
+    // Method 4: substring(int beginIndex, int endIndex)
+    String result = x2.substring(0,2);
+    System.out.println(result); //he
+    System.out.println(x2.substring(0,0)); //""
+    System.out.println(x2.substring(0,1)); //"h"
+
+    // check if the first three character is "wel". Print yes
+    String x3= "welcome";
+    // incorrect as string cannot use ==
+    if (x3.substring(0,3)=="wel"){
+      System.out.println("yes");
+    } else{
+      System.out.println("no");
+    }
+    
+    // Correct method
+    if (x3.substring(0,3).equals("wel")){
+      System.out.println("yes1");
+    } else {
+    System.out.println("no1");
+    }
+
+    // Correct method 2
+    if (x3.charAt(0)=='w'&& x3.charAt(1)== 'e'&& x3.charAt(2)== 'l'){
+      System.out.println("yes2");
+    } else {
+      System.out.println("no2");
+    }
   }
 }
