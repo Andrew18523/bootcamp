@@ -3,7 +3,7 @@ public class JavaQuest7 {
   public static void main(String[] args) {
     // Declare a int array, with value 1 to 10
     // code here
-    int[] ia= {1,2,3,4,5,6,7,8,9,10};
+    int[] ia= new int[] {1,2,3,4,5,6,7,8,9,10};
     int sum = 0;
 
     // Write a loop to sum up all value in the int array

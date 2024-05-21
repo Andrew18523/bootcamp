@@ -65,7 +65,12 @@ public class DemoNestedLoop {
       } 
     }
 
-
+    for (int i=0;i<21;i++){
+      if (i<=10 && i%2==1 ||i>10 && i%2 != 1){
+        System.out.print(i+" ");
+      }
+    }
+    System.out.println();
     //Searching
     String s= "Vincent Book Game Laptop";//13
     //Find the first index of char'a'
