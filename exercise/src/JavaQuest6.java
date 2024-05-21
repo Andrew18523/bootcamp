@@ -11,15 +11,14 @@ public class JavaQuest6 {
     int x = 1;
     int y = 1;
     int z = 1;
-    for (int i=0 ; i<15; i++){
-      if (i==0){
-        System.out.println(y);
-      } else{
-        z = y;
-        y = y+x;
-        x = z;
-        System.out.println(y);
-      }
+    String output1 ="1 1";
+    for (int i=0 ; i<13; i++){
+      z = y;
+      y = y+x;
+      x = z;
+      output1 = output1+" "+y;
     }
+    System.out.println(output1);
+    System.out.println("The length of String is "+output1.length());
   }
 }
