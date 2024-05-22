@@ -27,7 +27,7 @@ public class demoarray {
     System.out.println(arr3[1]); //"abc"
     System.out.println(arr3[2]); //"ijk"
     // Arrays.toString
-    System.out.println(Arrays.toString(arr3));
+    System.out.println(Arrays.toString(arr3)); //[hello, abc,ijk]
 
 
     // 9, -3, -100, 90, 66, -4
@@ -35,84 +35,94 @@ public class demoarray {
     int[] arr4 =new int[] {9,-3,-100,90,66,-4};
     for (int i=0; i<arr4.length;i++){
       System.out.println(arr4[i]);
-      }
-      // loop
-      //find the max value from arr4
-      int max=0;
-      int maxindex=0;
-      for (int i=0; i<arr4.length;i++){
-        if (arr4[i]>max || i==0){
-          max= arr4[i];
-          maxindex=i;
-        }
-      }
-
-      System.out.println("Max value is "+max+" and the index is " +maxindex);
-      int max1=Integer.MIN_VALUE;
-      for (int i=0;i<arr4.length;i++){
-        if (arr4[i]>max1){
-          max1=arr4[i];
-        }
-      }
-      System.out.println("Max value1 is "+max1);
-      int min=Integer.MAX_VALUE;
-      for (int i=0;i<arr4.length;i++){
-        if (arr4[i]<min){
-          min=arr4[i];
-        }
-      }
-      System.out.println("Min value1 is "+min);
-
-      char[] arr5 = new char[] {'l','e','e','r','q'};
-      //1. count the number of 'e'
-      //2. boolean result to store if 'r' exists
-      //3. String result to store "qreel"
-      boolean is_r_exist= false;
-      int count_e = 0;
-      String result_s = "";
-      for (int i=0; i<arr5.length;i++){
-        if (arr5[i]=='e'){
-          count_e++;
-        }
-        if ( arr5[i]=='r'){
-          is_r_exist=true;
-        }
-        result_s=arr5[i]+result_s;
-      }
-      System.out.println("The Count of 'e' is "+count_e);
-      System.out.println("Boolean result of 'r' exists is "+is_r_exist);
-      System.out.println("String result is "+result_s);
-
-      result_s="";
-      for (int i=arr5.length-1;i>=0;i--){
-        result_s+=arr5[i];
-      }
-      System.out.println("String result is "+result_s);
-
-      //Given two char[], -> result is a String Value which append all characters
-      char c1[] = new char[] {'o','a','k','p'};
-      char c2[] = new char [] {'a','b','f','t'};
-      //4a. result = "oakpabftf"
-      //4b. result ->'obkt' when even index, get value of c1, when odd index, get the value from c2
-      String result_4a="";
-      String result_4b="";
-      
-      for (int i=0; i<c1.length; i++){
-        result_4a+=c1[i];
-      }
-      for (int i=0; i<c2.length; i++){
-        result_4a+=c2[i];
-      }
-      System.out.println("Result of 4a is "+result_4a);
-
-      for (int i=0;i<c1.length; i++){
-        if (i%2==0){
-          result_4b+=c1[i];
-        } else {
-          result_4b+=c2[i];
-        }
-      }
-      System.out.println("Result of 4b is "+result_4b);
-
     }
+    // loop
+    //find the max value from arr4
+    int max=0;
+    int maxindex=0;
+    for (int i=0; i<arr4.length;i++){
+      if (arr4[i]>max || i==0){
+        max= arr4[i];
+        maxindex=i;
+      }
+    }
+
+    System.out.println("Max value is "+max+" and the index is " +maxindex);
+    int max1=Integer.MIN_VALUE;
+    for (int i=0;i<arr4.length;i++){
+      if (arr4[i]>max1){
+        max1=arr4[i];
+      }
+    }
+    System.out.println("Max value1 is "+max1);
+    int min=Integer.MAX_VALUE;
+    for (int i=0;i<arr4.length;i++){
+      if (arr4[i]<min){
+        min=arr4[i];
+      }
+    }
+    System.out.println("Min value1 is "+min);
+    char[] arr5 = new char[] {'l','e','e','r','q'};
+    //1. count the number of 'e'
+    //2. boolean result to store if 'r' exists
+    //3. String result to store "qreel"
+    boolean is_r_exist= false;
+    int count_e = 0;
+    String result_s = "";
+    for (int i=0; i<arr5.length;i++){
+      if (arr5[i]=='e'){
+        count_e++;
+      }
+      if ( arr5[i]=='r'){
+        is_r_exist=true;
+      }
+      result_s=arr5[i]+result_s;
+    }
+    System.out.println("The Count of 'e' is "+count_e);
+    System.out.println("Boolean result of 'r' exists is "+is_r_exist);
+    System.out.println("String result is "+result_s);
+
+    result_s="";
+    for (int i=arr5.length-1;i>=0;i--){
+      result_s+=arr5[i];
+    }
+    System.out.println("String result is "+result_s);
+
+    //Given two char[], -> result is a String Value which append all characters
+    char c1[] = new char[] {'o','a','k','p'};
+    char c2[] = new char [] {'a','b','f','t'};
+    //4a. result = "oakpabftf"
+    //4b. result ->'obkt' when even index, get value of c1, when odd index, get the value from c2
+    String result_4a="";
+    for (int i=0; i<c1.length; i++){
+      result_4a+=c1[i];
+    }
+    for (int i=0; i<c2.length; i++){
+      result_4a+=c2[i];
+    }
+    System.out.println("Result of 4a is "+result_4a); //oakpabftf
+    String result_4b="";
+    int length = c1.length>c2.length ? c1.length : c2.length; // conditional ? output_true : output_false 
+    for (int i=0;i<length; i++){
+      if (i%2==0){
+        result_4b+=c1[i];
+      } else {
+        result_4b+=c2[i];
+      }
+    }
+    System.out.println("Result of 4b is "+result_4b); //obkt
+    char c3[] = new char[] {'o','a','k','p','o','a','k','p'};
+    char c4[] = new char [] {'a','b','f','t'};
+    String result_4c="";
+    int length1 = c3.length>c4.length ? c3.length : c4.length;
+    for (int i=0; i<length1;i++){
+      if (i % 2== 0 && i<c3.length){
+        result_4c +=c3[i];
+      } else if (i % 2!= 0 && i < c4.length) {
+        result_4c +=c4[i];
+      }
+      
+    }
+    System.out.println("Result of 4c is "+result_4c); //ovktok
+  }
 }

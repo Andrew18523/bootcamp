@@ -126,5 +126,60 @@ public class DemoString {
     } else {
       System.out.println("no2");
     }
+    System.out.println();
+    System.out.println("isEmpty()");
+    // isEmpty()
+    // Empty String -> ""
+    String x7="";
+    String x8=" ";
+    String x9="abc";
+    System.out.println(x7.isEmpty());// true
+    System.out.println(x8.isEmpty());// false
+    System.out.println(x9.isEmpty());// false
+    System.out.println();
+    System.out.println("isBlank()");
+    // isBlank()
+    // Blank String -> ""," "
+    System.out.println(x7.isBlank());// true
+    System.out.println(x8.isBlank());// true
+    System.out.println(x9.isBlank());// false
+
+    //substring(0,3)
+    //substring(0)
+    String s10 = "hello";
+    System.out.println(s10.substring(0)); //from index 0 to end //hello
+    System.out.println(s10.substring(0,3)); //from index 0 to 3 //hel
+
+    //hello -> HELLO
+    System.out.println(s10.toUpperCase());
+    String s11 = "HeLLo";
+    System.out.println(s11.toLowerCase());
+
+    //replace(a,b)
+    System.out.println(s10.replace('l','x')); //replace character 'l' to 'x'
+    System.out.println(s10.replace("ll","xxx")); //replace sequence character "ll" to "xxx"
+
+    //contain ()
+    System.out.println(s10.contains("ell")); // s10 is contains sequence character "ell" ->true
+
+    //startsWith()
+    //endsWith()
+    System.out.println(s10.startsWith("He"));
+    System.out.println(s10.endsWith("o"));
+
+    //trim() remove left and right space
+    String s12 = "      Hello, bootcamp !!!!     ";
+    System.out.println(s12.trim());
+
+    String [] strings = new String [] {"hello","abcijk","vincent","HeLLo","    HeLLO     "};
+    //how many string contains "ELL" but ingore case
+    String check = "ELL";
+    int count = 0;
+    for (int i= 0 ; i<strings.length; i++){
+      if (strings[i].toUpperCase().contains(check)){
+        count++;
+      }
+    }
+    System.out.println("Total "+count+" string contins 'ELL'");
   }
 }
