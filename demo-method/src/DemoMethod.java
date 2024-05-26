@@ -70,4 +70,7 @@ public class DemoMethod {
     }
     return false;
   }
+  public static double circleArea (int radius){
+    return radius*radius*Math.PI;
+  }
 }
