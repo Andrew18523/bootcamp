@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class JavaQuest8 {
   // Write a loop to find the second max number.
   public static void main(String[] args) {
@@ -20,18 +22,18 @@ public class JavaQuest8 {
         secondMax=nums5[i+1];
       }
       if (nums5[i+2]>Max){
-        secondMax=Max;
-        Max=nums5[i+2];
-        nums5[i+1]=secondMax;
+        nums5[i+1]=nums5[i+2];
+        nums5[i+2]=Max;
+        nums5[i]=secondMax;
       } else if (nums5[i+2]> secondMax){
-        secondMax= nums5[i+2];
-        nums5[i+2]=Max;
-        nums5[i+1]=secondMax;
+        nums5[i]=secondMax;
+        nums5[i+1]=Max;
       } else {
-        nums5[i+2]=Max;
-        nums5[i+1]=secondMax;
+        nums5[i]=nums5[i+2];
+        nums5[i+2]=secondMax;
+        nums5[i+1]=Max;
       }
     }
-    System.out.println("Second Max Number is "+secondMax);
+    System.out.println("Second Max Number is "+nums5[nums5.length-2]);
   }
 }
