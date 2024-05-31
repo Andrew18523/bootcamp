@@ -1,6 +1,6 @@
 public class demoloop {
   public static void main(String[] args) {
-    int x=3;
+    //int x=3;
 
     //for loop
     // initialization (varable declaration & assigment; continue criteria ; incremental opration)

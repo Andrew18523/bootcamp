@@ -170,6 +170,7 @@ public class demoarray {
     //Sorting -> {-4,6,10,15}
     //for loop
     //nested loop
+    //Approach 1
     int temp1= 0;
     int[] arr8 = new int[] {6,10,-4,15,10,3,7,8,9,17,20,1,3};
     for (int i = arr8.length-1 ; i>0 ;i--){
@@ -182,6 +183,20 @@ public class demoarray {
       }
     }
     System.out.println("New arr8 = "+Arrays.toString(arr8));
+
+    //Approach 2
+    int temp5=0;
+    int[] arr20 = new int[] {6,10,-4,15,10,3,7,8,9,17,20,1,3};
+    for (int i = 0; i<arr20.length-1; i++){
+      for (int j = 0; j< arr20.length - i -1 ; j++){
+        if (arr20[j]> arr20[j+1]){
+          temp5 = arr20[j];
+          arr20[j]=arr20[j+1];
+          arr20[j+1]=temp5;
+        }
+      }
+    }
+    System.out.println("New arr20 ="+Arrays.toString(arr20));
 
     //Swap char value
     String s = "hello";//Swap e and o ->holle
