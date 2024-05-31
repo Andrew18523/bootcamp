@@ -12,6 +12,10 @@ public class DemoMethod {
     System.out.println(max(new int[]{1,2,3,4,5,6,7,8,9}));
     System.out.println(isElderly(70));
     System.out.println(isSubstring("Hello", "llo"));
+    System.out.println(circleArea(1));
+
+    //double * double
+    System.out.println(0.2*0.1);  // 0.020000000000000004 -> problem ->solution is Big Decimal
   }
   public static int sum (int x, int y){ // (The method takes two integer parameters from main) 
     //int sum-> The method returns an integer value. sum is the name of the method.

@@ -124,5 +124,82 @@ public class demoarray {
       
     }
     System.out.println("Result of 4c is "+result_4c); //ovktok
+
+    int[] arr6 = new int[] {4,8,3};
+    double average = 0;
+    int count = 0;
+    for (int i=0; i<arr6.length;i++){
+      average += arr6 [i];
+      count ++;
+    }
+    average = (average/count);
+    System.out.println(average);
+
+    // swapping in array
+    int[] arr7 = new int[] {6,10,-4,15};
+    //swap -4 and 6 ->{-4,10,6,15};
+    int temp = arr7 [2];
+    arr[2] = arr[0];
+    arr[0] = temp;
+    System.out.println(Arrays.toString(arr7));
+
+    //Level 1;
+    //arr 9 = {-4,6,10,15}
+    //move -4 to last
+    int temp2 = 0;
+    int[] arr9 = new int[] {-4,6,10,15};
+    for (int i = 0 ;i <arr9.length-1; i++){
+      temp2 = arr9[i];
+      arr9[i]= arr9[i+1];
+      arr9[i+1] = temp2;
+    }
+    System.out.println("New Arr9 = "+Arrays.toString(arr9));
+
+    //Level 2
+    int[] arr10 = new int[] {-4,15,10,6};
+    int temp3 =0;
+    for (int i = 0 ; i<arr10.length-1; i++){
+      if (arr10[i]>arr10[i+1]){
+        temp3 = arr10[i];
+        arr10[i]=arr10[i+1];
+        arr10[i+1]=temp3;
+      }
+    }
+    System.out.println("New Arr10 = "+Arrays.toString(arr10));
+
+    //Sorting -> {-4,6,10,15}
+    //for loop
+    //nested loop
+    int temp1= 0;
+    int[] arr8 = new int[] {6,10,-4,15,10,3,7,8,9,17,20,1,3};
+    for (int i = arr8.length-1 ; i>0 ;i--){
+      for (int j = 0 ; j < i ; j++){
+        if (arr8[j]>arr8[j+1]){
+          temp1 = arr8[j];
+          arr8[j]=arr8[j+1];
+          arr8[j+1]=temp1;
+        }
+      }
+    }
+    System.out.println("New arr8 = "+Arrays.toString(arr8));
+
+    //Swap char value
+    String s = "hello";//Swap e and o ->holle
+    char[] c = new char[s.length()];
+    //convert to char array
+    //for (int i = 0 ; i <c.length; i++){
+    //  c[i]=s.charAt(i);
+    //}
+    c=s.toCharArray(); //  {'h','e','l','l','o'}
+    char temp4 = c[1];
+    c[1] = c[4];
+    c[4] = temp4;
+    //String str = String.valueOf(c);
+    //System.out.println(str);
+
+    System.out.println(String.valueOf(c));
+
+
+    
   }
 }

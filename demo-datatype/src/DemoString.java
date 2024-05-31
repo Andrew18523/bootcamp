@@ -181,5 +181,31 @@ public class DemoString {
       }
     }
     System.out.println("Total "+count+" string contins 'ELL'");
+    // equalsIngoreCase()
+    for (int i =0; i < strings.length; i++){
+      if (strings[i].trim().equalsIgnoreCase("hello")){
+        System.out.println(strings[i]);
+      }
+    }
+    String s20 = "helloll";
+    System.out.println(s20.indexOf("ll")); //2
+    System.out.println(s20.indexOf('e')); //1
+    System.out.println(s20.indexOf('l')); //2
+    System.out.println(s20.indexOf("ll",4));//5
+    System.out.println(s20.indexOf("ll",6));//-1
+    System.out.println(s20.indexOf(101));//1, ascii 'e' -> 101
+
+    System.out.println(s20.lastIndexOf("ll"));//5
+    System.out.println(s20.lastIndexOf('e')); //1
+
+    String s21= "abc";
+    System.out.println(s21+"def");//abcdef
+
+    String s22 = "abc";
+    System.out.println(s22.concat("def"));// better performance
+
+    System.out.println(s21.compareTo(s22)); //0, the value of s21 is equal to value of s22
+    System.out.println(s21.equals(s22));
+    System.out.println(s21==s22); //true?? comparing the string object address
   }
 }

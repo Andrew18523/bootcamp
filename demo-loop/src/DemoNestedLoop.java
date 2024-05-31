@@ -80,5 +80,46 @@ public class DemoNestedLoop {
         break; // break is exit for loop not if loop
       }
     }
+
+    // *****
+    for (int i=0;i<5;i++){
+      System.out.print("*");
+    }
+    System.out.println();
+    
+    //*****
+    //*****
+    //*****
+    //*****
+    //*****
+    System.out.println("5X5 *");
+    for (int row=0;row<5 ;row++){
+      for (int column=0 ; column<5;column++){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+    System.out.println("Decending *");
+    //*****
+    //****
+    //***
+    //**
+    //*
+
+    for (int row = 5 ; row>0; row --){
+      for (int column = row ; column > 0 ; column --){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+    // *
+    // **
+    // ***
+    // ****
+    // **
+    // **
+    // *
   }
 }
