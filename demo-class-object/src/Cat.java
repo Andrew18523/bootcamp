@@ -10,6 +10,9 @@ public class Cat { // Class Name -> Name Convention should be able to describe p
   // For Example, Car c1 = new Cat(); -> create a new object (new Cat()) and c1 is the object reference that reference to the new object (new Cat()) 
   // c1.setAge(13);
   // "this" -> the object pointed to C1 object reference
+
+  // if No Constructor is defined
+  // by default Java implicitly has a empty constructor
   public void setAge(int age){
     this.age =age;
   }

@@ -15,5 +15,11 @@ public class TestCat {
     c2.setAge(7);
     System.out.println(c1.getAge());
     System.out.println(c2.getAge());
+
+    Ball b = new Ball();
+    // "Ball b" -> becasue Ball.class is "public class"
+    // "new Ball()" => because the constructor is public"
+
+    b.setColcr("RED");
   }
 }
