@@ -6,7 +6,7 @@ public class DemoInteger {
     //Internal Cache (for Number)
     i1 = 127; // i1 is a object reference. 127 is a newly created Integer object
     i2 = 127; // i1 is a object reference. 127 is a resue the original Integer object
-    // range in -128 to 127 will use original object
+    // range in -128 to 127 will re-use original object as they are common to use in real world
     System.out.println(i1==i2);// true (are they same object?)
 
     Integer i3 = 128; // -> create a new Object
