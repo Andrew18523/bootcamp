@@ -24,7 +24,7 @@ public class StringHelper {
   public String toString(){
     return this.str;
   }
-  public StringHelper append(String s){ //return StringHelper. it allow to write chain method in main
+  public StringHelper append(String s){ //return StringHelper to leave the object reference. It allow to write chain method in main
     this.str +=s;
     return this;
   }

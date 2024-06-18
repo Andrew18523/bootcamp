@@ -3,7 +3,9 @@ public class Form {
   private String firstName;
   private String lastName;
   private Address address;
-
+  // private String Addressline1;
+  // private String Addressline2;
+  // private String Addressline3;
   public Form (){
 
   }
@@ -39,14 +41,10 @@ public class Form {
     return "Name: " +this.firstName+
       " "+ this.lastName+
       ". Address: "+
-      this.address.getAddress()+".";
+      this.address+".";
     }
 
-  public static void main(String[] args) {
-    Form f1 = new Form("Andrew","Leung",new Address("Room 1", "MM House", "ABC ESTATE")); //Name: Andrew Leung. Address: Room 1, MM House, ABC ESTATE.
-    System.out.println(f1.toString());
 
-  }
 
 
 }

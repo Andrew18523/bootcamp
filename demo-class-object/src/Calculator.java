@@ -78,6 +78,20 @@ public class Calculator {
     Calculator.test(new String[]{"abc","jkl"});
     Calculator.test2(new String[] {"abc","jkl"});
     Calculator.test2("abc","jkl");
+
+    // call static method
+    Calculator.sum(3,2); //5
+    Calculator x = new Calculator();
+    x.setX(3);
+    x.setY(2);
+    System.out.println(x.sum());//5
+
+    System.out.println(x.sum(3,2));//5 call static method
+    // object reference is able to call static method
+
+    // error: Calculator.sum(); instance method cannot be called by Class Name
+    // static method can be call by instance (object) or Class name
+    // Instance nethod can be called by instance (object) ONLY.
   }
 
 }
