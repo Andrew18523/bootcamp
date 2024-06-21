@@ -1,4 +1,7 @@
-public class Person1 { //abstract 相對抽象 Person vs Student -> 會用相對抽象的CLASS 去做一D COMMEN FACTOR
+//abstract 相對抽象 Person vs Student -> 會用相對抽象的CLASS 去做一D COMMEN FACTOR
+
+// public abstract class -> cannot new this object
+public abstract class Person1 { 
   private String name;
   private int age;
 
@@ -14,8 +17,14 @@ public class Person1 { //abstract 相對抽象 Person vs Student -> 會用相對
   public int getAge(){
     return this.age;
   }
+  public void setAge(int age){
+    this.age = age;
+  }
+
   public static void main(String[] args) {
-    Person1 p = new Person1("ABC",13);
+    
+    // A object cannot be created via abstract class
+    //Person1 p = new Person1("ABC",13);
 
     // Student.class is public
     // Student.class constructor is public

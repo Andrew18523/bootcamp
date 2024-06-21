@@ -1,3 +1,4 @@
+package Quiz1;
 public class Quiz1Q2 {
   public static void main(String[] args) {
     byte hourOfDays = 24;

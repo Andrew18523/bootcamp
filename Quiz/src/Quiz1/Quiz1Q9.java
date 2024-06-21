@@ -1,3 +1,4 @@
+package Quiz1;
 public class Quiz1Q9 {
   public static void main(String[] args) {
     int a = 0;

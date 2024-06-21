@@ -84,7 +84,7 @@ public class Person {
   public static void main(String[] args) {
     
     //create a person (object, p1 is object reference)
-    Person1 p1 = new Person1(); // "new Person()" -> is a commend to create a new person object in Memory. p1 is the oject reference
+    Person p1 = new Person(); // "new Person()" -> is a commend to create a new person object in Memory. p1 is the oject reference
     // set firsttName
     p1.setFirstName("Andrew");
     // set lastName
@@ -94,11 +94,11 @@ public class Person {
     p1.setWeight(110);
     System.out.println("Full Name is "+p1.getFullName());
     System.out.println("BMI (Instance Method): "+p1.BMI()); // must have a person (object) then to call
-    System.out.println("BMI (Static Method):" + Person1.BMI_Static(110, 1.85)); // call static method - BMI_Static in class Person
+    System.out.println("BMI (Static Method):" + Person.BMI_Static(110, 1.85)); // call static method - BMI_Static in class Person
     System.out.println(p1.toString());
 
     // Create a person object with given attributes values
-    Person1 p2 = new Person1("John", "Chan", 100, 1.7); 
+    Person p2 = new Person("John", "Chan", 100, 1.7); 
     System.out.println(p2.getFirstName());
     System.out.println(p2.BMI());
     p2.setWeight(90);
