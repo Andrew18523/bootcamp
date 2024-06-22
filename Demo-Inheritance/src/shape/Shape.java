@@ -31,8 +31,10 @@ public abstract class Shape {
 
     // extra example
     StringBuilder sb = new StringBuilder("hello ");
-    sb.append("world");
+    sb.append("world"); // In Java, you do not have to assign the return object to a reference
     //sb = sb.append("world"); // Why above can do this
     System.out.println(sb);
+
+    // you should refer to Box.java for the answer
   }
 }
