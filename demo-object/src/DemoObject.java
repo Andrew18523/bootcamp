@@ -37,6 +37,22 @@ public class DemoObject{
     //because the original hashCode() was override in Cat.java
   }
 
+  Object cat = new Cat();
+  //Error: cat.run(); // -> cat (object reference) indeed point to car object
+  // However, the run instance method can only be called by object decleared by Cat.class
+  // if the object reference is decleard by object.class, it cannot call run() method as object.class do not have run() method
+  //雖然 object reference "cat" 指住左 cat object. 但是cat 係用object.class 去declear。因為 object.class 無 run() method。所以call 唔到
+  Cat cat4 = (Cat) cat;
+  cat4.run();
+  // cat4 call 到run() method 因為cat4 係declear 為Cat.class
+  
+  
+  Object cat2 = new Dog();
+  Cat cat3 = (Cat) cat2; // cat2 is a dog object. why declear cat3 is no compile error. For Java, it only check with relation between cat/dog and object
+  //Compile error: Cat cat4 = cat2; 
+  //cat 2 is a Object.class which is higher than Cat.class 
+  //So we cannot assign a higher class to lower class like assing double to a integer.
+
   // Java: Ensure Type Safty during compile time
   // public static Object sum(Object x, Object y){
   // return x+y; // "+" is only operate in String, Integer, int, Double etc...
