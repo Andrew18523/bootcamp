@@ -26,7 +26,7 @@ public class Student extends Person1 {
     //return this.age;
   //}
 
-  // setAge in Student is meaningless as input ->outpu -> as input in setAge() in Person1.class. No manipulation
+  // setAge in Student is meaningless as input ->output -> as input in setAge() in Person1.class. No manipulation
   //public void setAge(int age){
   // 2. call parent object setAge() method
     //super.setAge(age);

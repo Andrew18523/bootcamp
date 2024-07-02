@@ -43,7 +43,7 @@ public class DemoObject{
   // if the object reference is decleard by object.class, it cannot call run() method as object.class do not have run() method
   //雖然 object reference "cat" 指住左 cat object. 但是cat 係用object.class 去declear。因為 object.class 無 run() method。所以call 唔到
   Cat cat4 = (Cat) cat;
-  cat4.run();
+  //cat4.run();
   // cat4 call 到run() method 因為cat4 係declear 為Cat.class
   
   
