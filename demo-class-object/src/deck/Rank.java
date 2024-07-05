@@ -29,4 +29,6 @@ public enum Rank {
   public boolean isHigherThen (Rank rank){
     return this.value > rank.getvalue();
   }
+
+  
 }

@@ -1,6 +1,8 @@
 package deck;
 
 public class Deck {
+
+  private String game;
   // Player, Deck, Card
   // public static final String[] suits = new String [] {"DIAMOND", "CLUB","HEART","SPADE"};
   // public static final String[] ranks = new String [] {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
@@ -10,6 +12,18 @@ public class Deck {
   private Card[] cards;
 
   public Deck(){
+    this.game = "Normal Game";
+    this.cards = new Card [Deck.length]; // Card [52] = [card 1,card 2, ... , card 52]
+    int idx = 0;
+    for (Suit suit : Suit.values()) {
+      for (Rank rank: Rank.values()) {
+        this.cards[idx++] = new Card(suit,rank);
+      }
+    }
+  }
+
+  public Deck(String game){
+    this.game = game;
     this.cards = new Card [Deck.length]; // Card [52] = [card 1,card 2, ... , card 52]
     int idx = 0;
     for (Suit suit : Suit.values()) {

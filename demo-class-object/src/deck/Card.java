@@ -22,7 +22,7 @@ public class Card {
     public boolean isHigherThen (Card card){
       if (this.rank.isHigherThen(card.getRank()))
         return true;
-      if (this.suit.isHigherThen(card.getSuit()))
+      if (this.suit.isHigherThen(card.getSuit())&& this.rank==card.getRank())
         return true;
       return false;
     }
@@ -30,6 +30,13 @@ public class Card {
   @Override
   public String toString(){
     return "The card is "+this.suit+" of "+this.rank+".";
+  }
+
+  public static void main(String[] args) {
+    System.out.println(new Card(Suit.CLUB, Rank.FIVE).isHigherThen(new Card(Suit.DIAMOND, Rank.JACK))); // false
+    System.out.println(new Card(Suit.DIAMOND, Rank.JACK).isHigherThen(new Card(Suit.CLUB, Rank.FIVE))); // true
+    System.out.println(new Card(Suit.DIAMOND, Rank.JACK).isHigherThen(new Card(Suit.CLUB, Rank.JACK))); // false
+
   }
 
 }
