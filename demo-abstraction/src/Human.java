@@ -28,7 +28,7 @@ public class Human extends Superhuman implements Walkable, Readable { //Interfac
     System.out.println(Walkable.AGE); // 3, public static final
     Human h1 = new Human(1.60d);
     h1.walk(); //Human is walking....
-    //h1.run(); //Defalut. I am running
+    h1.run(); //Defalut. I am running
     Superman s1 = new Superman();
     s1.run(); //Superman is running
     Walkable.swim(); //static I am swiming
