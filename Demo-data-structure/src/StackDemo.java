@@ -19,6 +19,6 @@ public class StackDemo {
     ss2.add("123");
     ss2.add("abc");
     ss2.remove("123");
-    System.out.println(ss2);
+    System.out.println(ss2); //[abc]
   }
 }

@@ -21,6 +21,7 @@ public class ArrayListDemo {
 
     // ArrayList
     ArrayList<Integer> integers2 = new ArrayList<Integer>(); // call constructor of ArrayList.class
+    System.out.println("integer2.size()="+integers2.size());
     integers2.add(2);
     integers2.add(10);
     integers2.add(-4);
