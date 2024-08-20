@@ -17,6 +17,7 @@ public class DemoIncrement {
     this.x++;
   }
 
+  // Solution 3 -> Locked a code block
   public  void increment2 (){
     this.k++;
     synchronized(lock){
